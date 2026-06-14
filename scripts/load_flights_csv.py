@@ -23,7 +23,7 @@ from backend import config  # noqa: E402
 
 CREATE_TABLE_SQL = """
 CREATE TABLE IF NOT EXISTS flights (
-    id              BIGSERIAL PRIMARY KEY,
+    id              BIGINT PRIMARY KEY,
     flight_no       TEXT,
     airline_code    TEXT,
     airline_name    TEXT,
@@ -46,6 +46,7 @@ CREATE TABLE IF NOT EXISTS flights (
 """
 
 INSERT_COLUMNS = [
+    "id",
     "flight_no", "airline_code", "airline_name", "origin", "destination",
     "departure_date", "departure_time", "arrival_date", "arrival_time",
     "status", "delay_minutes", "delay_reason", "terminal", "gate",
