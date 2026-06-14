@@ -1,0 +1,30 @@
+{
+  "name": "Airline Customer Support",
+  "image": "mcr.microsoft.com/devcontainers/python:3.11",
+  "features": {
+    "ghcr.io/devcontainers/features/git:1": {}
+  },
+  "forwardPorts": [8000, 8501],
+  "portsAttributes": {
+    "8000": { "label": "FastAPI", "onAutoForward": "notify" },
+    "8501": { "label": "Streamlit UI", "onAutoForward": "openPreview" }
+  },
+  "postCreateCommand": "pip install --upgrade pip && pip install -r requirements.txt",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-toolsai.jupyter",
+        "charliermarsh.ruff"
+      ],
+      "settings": {
+        "python.defaultInterpreterPath": "/usr/local/bin/python",
+        "python.terminal.activateEnvironment": false
+      }
+    }
+  },
+  "remoteEnv": {
+    "PYTHONPATH": "${containerWorkspaceFolder}"
+  }
+}
