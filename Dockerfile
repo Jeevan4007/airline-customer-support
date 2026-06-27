@@ -21,4 +21,4 @@ COPY data ./data
 EXPOSE 8501
 
 # Start both FastAPI backend and Streamlit frontend
-CMD ["sh", "-c", "uvicorn app.main:app --host 0.0.0.0 --port 8003 & streamlit run streamlit_app.py --server.port 8501 --server.address 0.0.0.0"]
+CMD ["sh", "-c", "uvicorn api.main:app --host 0.0.0.0 --port 8000 & streamlit run ui/streamlit_app.py --server.port 8501 --server.address 0.0.0.0"]
