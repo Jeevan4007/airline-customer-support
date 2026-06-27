@@ -26,9 +26,9 @@ PINECONE_REGION: str = os.getenv("PINECONE_REGION", "us-east-1")
 # ---------------- Embeddings ----------------
 EMBEDDING_MODEL_NAME: str = os.getenv(
     "EMBEDDING_MODEL_NAME",
-    "sentence-transformers/all-MiniLM-L6-v2",
+    "text-embedding-3-small",
 )
-EMBEDDING_DIMENSION: int = int(os.getenv("EMBEDDING_DIMENSION", "384"))
+EMBEDDING_DIMENSION: int = int(os.getenv("EMBEDDING_DIMENSION", "1536"))
 
 
 # ---------------- PostgreSQL ----------------

@@ -6,7 +6,7 @@ from langchain_community.document_loaders import PyMuPDFLoader
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.runnables import RunnablePassthrough
-from langchain_huggingface import HuggingFaceEmbeddings
+from langchain_openai import OpenAIEmbeddings
 from langchain_pinecone import PineconeVectorStore
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from pinecone import Pinecone, ServerlessSpec
@@ -16,7 +16,7 @@ from backend.llm import llm
 
 
 # ---------- Embeddings ----------
-embedding_model = HuggingFaceEmbeddings(model_name=config.EMBEDDING_MODEL_NAME)
+embedding_model = OpenAIEmbeddings(model=config.EMBEDDING_MODEL_NAME)
 
 
 # ---------- Pinecone index + vector store ----------
