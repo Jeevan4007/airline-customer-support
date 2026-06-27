@@ -2,7 +2,8 @@
   "name": "Airline Customer Support",
   "image": "mcr.microsoft.com/devcontainers/python:3.11",
   "features": {
-    "ghcr.io/devcontainers/features/git:1": {}
+    "ghcr.io/devcontainers/features/git:1": {},
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
   },
   "forwardPorts": [8000, 8501],
   "portsAttributes": {
