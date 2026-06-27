@@ -11,7 +11,11 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy application code
-COPY . .
+COPY api ./api
+COPY backend ./backend
+COPY ui ./ui
+COPY scripts ./scripts
+COPY data ./data
 
 # Expose Streamlit port
 EXPOSE 8501
