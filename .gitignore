@@ -38,3 +38,5 @@ data/*.csv
 data/*.pdf
 data/*.xlsx
 !data/README.md
+venv/
+.venv/
